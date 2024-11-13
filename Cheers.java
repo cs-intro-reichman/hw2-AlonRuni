@@ -4,18 +4,19 @@ public class Cheers {
 	String word = args[0];
         word = word.toUpperCase();
         int num = Integer.parseInt(args[1]);
-        char[] test = {'A','E', 'F', 'H', 'I', 'L', 'M', 'N', 'O', 'R', 'S', 'X'};
-        char e;
+        char[] testGroup = {'A','E', 'F', 'H', 'I', 'L', 'M', 'N', 'O', 'R', 'S', 'X'};
+        char charToTest;
         boolean isSame = false;
 
         for(int i = 0; i < word.length(); i++) {
-            e = word.charAt(i); 
+
+            charToTest = word.charAt(i); 
             isSame = false;
             System.out.print("Give me a");
 
-            //testing for letters to print "an" insstead of "a"
-            for(int j = 0; j < test.length; j++){
-                if(e == test[j]) {
+            //comparing the each letter to the group of letters which should print "an" instead of "a"
+            for(int j = 0; j < testGroup.length; j++) {
+                if(charToTest == testGroup[j]) {
                         System.out.print("n ");
                         isSame = true;
                         break;
@@ -24,7 +25,7 @@ public class Cheers {
             }  
 
             if(isSame != true) System.out.print("  ");
-            System.out.println(word.charAt(i) + "!");
+            System.out.println(word.charAt(i) + ": " + word.charAt(i) + "!");
         }
 
         System.out.println("What does that spell??");
