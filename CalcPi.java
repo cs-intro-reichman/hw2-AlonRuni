@@ -13,8 +13,7 @@ public class CalcPi {
 			sumAll = sumAll + fraction;
 		}
 		
-
 		System.out.println("pi according to Java: " + Math.PI);
-		System.out.println("aproximated pi: " + sumAll * 4);
+		System.out.println("pi, approximated:     " + sumAll * 4);
 	}
 }
