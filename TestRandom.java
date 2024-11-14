@@ -4,19 +4,19 @@ public  class  TestRandom {
 	    int timesToTest = Integer.parseInt(args[0]);
 		int heads = 0;
 		int tails = 0;
-		for(int i = 0; i < timesToTest; i++) {
-			double random = Math.random();
-			if(Math.random() > 0.5) {
+		for (int i = 0; i < timesToTest; i++) {
+			if (Math.random() > 0.5) {
 				heads += 1;
 			} else {
 				tails += 1;
 			}
 		}
 		double ratio = ((heads != 0) && (tails != 0)) ? (double) heads / (double) tails : 0;
-
 		System.out.println("> 0.5 " + heads + " times");
 		System.out.println("<= 0.5 " + tails + " times");
 
-		if(ratio != 0)System.out.println("ratio: " + ratio);
+		if (ratio != 0) {
+			System.out.println("ratio: " + ratio);
+		}
 	}
 }
