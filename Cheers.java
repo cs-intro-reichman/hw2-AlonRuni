@@ -14,8 +14,8 @@ public class Cheers {
             isSame = false;
             System.out.print("Give me a");
 
-                if(testGroup.indexOf(i) != -1) {
-                        System.out.print(" ");
+                if(testGroup.indexOf(charToTest) != -1) {
+                        System.out.print("  ");
                 } else {
                         System.out.print("n ");
                 }
