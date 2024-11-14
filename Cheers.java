@@ -4,7 +4,7 @@ public class Cheers {
 	String word = args[0];
         word = word.toUpperCase();
         int num = Integer.parseInt(args[1]);
-        char[] testGroup = {'A','E', 'F', 'H', 'I', 'L', 'M', 'N', 'O', 'R', 'S', 'X'};
+        String testGroup = "AEFHILMNORSX";
         char charToTest;
         boolean isSame = false;
 
@@ -14,17 +14,12 @@ public class Cheers {
             isSame = false;
             System.out.print("Give me a");
 
-            //comparing the each letter to the group of letters which should print "an" instead of "a"
-            for(int j = 0; j < testGroup.length; j++) {
-                if(charToTest == testGroup[j]) {
+                if(testGroup.indexOf(i) != -1) {
                         System.out.print("n ");
-                        isSame = true;
-                        break;
+                } else {
+                        System.out.print(" ");
                 }
-                
-            }  
-
-            if(isSame != true) System.out.print("  ");
+           
             System.out.println(word.charAt(i) + ": " + word.charAt(i) + "!");
         }
 
