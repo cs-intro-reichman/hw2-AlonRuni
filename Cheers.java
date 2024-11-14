@@ -15,9 +15,9 @@ public class Cheers {
             System.out.print("Give me a");
 
                 if(testGroup.indexOf(i) != -1) {
-                        System.out.print("n ");
-                } else {
                         System.out.print(" ");
+                } else {
+                        System.out.print("n ");
                 }
            
             System.out.println(word.charAt(i) + ": " + word.charAt(i) + "!");
